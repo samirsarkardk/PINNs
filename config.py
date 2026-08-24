@@ -32,8 +32,8 @@ N_COLLOCATION = 20000
 INPUT_DIM = 2
 OUTPUT_DIM = 1
 
-HIDDEN_DIM = 50
-NUM_HIDDEN_LAYERS = 9
+HIDDEN_DIM = 10
+NUM_HIDDEN_LAYERS = 3
 
 
 # ==========================================================
@@ -41,7 +41,7 @@ NUM_HIDDEN_LAYERS = 9
 # ==========================================================
 LEARNING_RATE = 1e-5
 
-EPOCHS = 40000
+EPOCHS = 4000
 
 
 # ==========================================================
