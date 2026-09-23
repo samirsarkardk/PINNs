@@ -6,7 +6,7 @@
 import torch
 import numpy as np
 
-from config import (
+from Aconfig import (
     DEVICE,
     N_INITIAL,
     N_BOUNDARY,
