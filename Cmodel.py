@@ -6,7 +6,7 @@
 import torch
 import torch.nn as nn
 
-from config import (
+from Aconfig import (
     INPUT_DIM,
     OUTPUT_DIM,
     HIDDEN_DIM,

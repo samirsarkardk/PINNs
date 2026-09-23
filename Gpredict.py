@@ -6,7 +6,7 @@
 import torch
 import numpy as np
 
-from config import DEVICE
+from Aconfig import DEVICE
 
 
 # ==========================================================

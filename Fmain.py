@@ -6,28 +6,28 @@
 import torch
 import numpy as np
 
-from config import (
+from Aconfig import (
     DEVICE,
     MODEL_PATH,
     SEED
 )
 
-from model import PINN
+from PINNs.Cmodel import PINN
 
-from data import (
+from Bdata import (
     generate_initial_points,
     generate_boundary_points,
     generate_collocation_points
 )
 
-from train import train
+from Etrain import train
 
-from predict import (
+from Gpredict import (
     predict,
     exact_solution
 )
 
-from plots import (
+from PINNs.Hplots import (
     plot_loss,
     plot_prediction
 )

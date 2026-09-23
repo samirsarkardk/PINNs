@@ -7,12 +7,12 @@ import torch
 import time
 
 start_time = time.time()
-from config import (
+from Aconfig import (
     LEARNING_RATE,
     EPOCHS
 )
 
-from loss import total_loss
+from Dloss import total_loss
 
 
 def train(
