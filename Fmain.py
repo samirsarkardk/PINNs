@@ -12,7 +12,7 @@ from Aconfig import (
     SEED
 )
 
-from PINNs.Cmodel import PINN
+from Cmodel import PINN
 
 from Bdata import (
     generate_initial_points,
@@ -27,7 +27,7 @@ from Gpredict import (
     exact_solution
 )
 
-from PINNs.Hplots import (
+from Hplots import (
     plot_loss,
     plot_prediction
 )
@@ -115,6 +115,16 @@ def main():
     t=0.25,
     num_points=5000
 )
+
+# ------------------------------------------------------
+# Relative L2 Error
+# ------------------------------------------------------
+
+    relative_l2_error = np.linalg.norm(u_pred - u_exact) / np.linalg.norm(u_exact)
+
+    print(f"\nRelative L2 Error : {relative_l2_error:.6e}")
+
+    print(f"Relative L2 Error Percentage : {relative_l2_error * 100:.4f}%")
 
    
 
