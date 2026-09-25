@@ -112,7 +112,6 @@ def main():
 
     x, u_exact, u_pred = predict(
     model,
-    t=0.25,
     num_points=5000
 )
 

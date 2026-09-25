@@ -27,13 +27,36 @@ def exact_solution(x, t):
 # Prediction
 # ==========================================================
 
-def predict(model, t=0.25, num_points=5000):
+# def predict(model, t=0.25, num_points=5000):
+
+#     model.eval()
+
+#     x_test = torch.linspace(0, 1, num_points).view(-1, 1).to(DEVICE)
+
+#     t_test = torch.full_like(x_test, t)
+
+#     with torch.no_grad():
+
+#         u_pred = model(x_test, t_test)
+
+#     x = x_test.cpu().numpy().flatten()
+
+#     t_array = t * np.ones_like(x)
+
+#     u_exact = exact_solution(x, t_array)
+
+#     u_pred = u_pred.cpu().numpy().flatten()
+
+#     return x, u_exact, u_pred
+
+
+def predict(model, num_points=5000):
 
     model.eval()
 
     x_test = torch.linspace(0, 1, num_points).view(-1, 1).to(DEVICE)
 
-    t_test = torch.full_like(x_test, t)
+    t_test = torch.linspace(0, 1, num_points).view(-1, 1).to(DEVICE)
 
     with torch.no_grad():
 
@@ -41,9 +64,9 @@ def predict(model, t=0.25, num_points=5000):
 
     x = x_test.cpu().numpy().flatten()
 
-    t_array = t * np.ones_like(x)
+    t = t_test.cpu().numpy().flatten()
 
-    u_exact = exact_solution(x, t_array)
+    u_exact = exact_solution(x, t)
 
     u_pred = u_pred.cpu().numpy().flatten()
 
